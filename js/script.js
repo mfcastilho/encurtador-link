@@ -55,7 +55,19 @@ function copyLink(){
     return;
   }
   
+  //seleciona o que queremos copiar
   document.querySelector("[data-input-url]").select();
-  document.execCommand("copy");
+
+  //Copia em dispositivos móveis
+  document.querySelector("[data-input-url]").setSelectionRange(0, 99999);
+
+  //copia no navegador(comando execCommand está depreciado)
+  //document.execCommand("copy");
+
+
+  //copia no navegador
+  navigator.clipboard.writeText(document.querySelector("[data-input-url]").value);
+
+  alert(`URL ${document.querySelector("[data-input-url]").value} copiada com sucesso!`);
 
 }
