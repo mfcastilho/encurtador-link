@@ -6,8 +6,10 @@ console.log("rodando...");
 
 
 const shortenerButton = document.querySelector("[data-shortener]");
+const copyButton = document.querySelector("[data-copy-btn]");
 
 shortenerButton.addEventListener("click",shortenerUrl);
+copyButton.addEventListener("click", copyLink);
 
 
 function shortenerUrl(){
@@ -18,9 +20,6 @@ function shortenerUrl(){
     alert("Insira uma url no formulário");
     return;
   }
-
-
-  //encurtar o link
 
   //headers
   let headers = {
@@ -34,6 +33,7 @@ function shortenerUrl(){
     domain: {fullName: "rebrand.ly"}
   }
 
+  //Fazendo a requisição na api
   fetch("https://api.rebrandly.com/v1/links", {
     method:"POST",
     headers:headers,
@@ -43,5 +43,12 @@ function shortenerUrl(){
     let input = document.querySelector("[data-input-url]");
     input.value = json.shortUrl;
   })
+
+}
+
+function copyLink(){
+  
+  document.querySelector("[data-input-url]").select();
+  document.execCommand("copy");
 
 }
