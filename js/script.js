@@ -47,6 +47,13 @@ function shortenerUrl(){
 }
 
 function copyLink(){
+
+  let url = document.querySelector("[data-input-url]").value;
+
+  if(!url){
+    alert("O formulário está vazio! Não há nada para copiar");
+    return;
+  }
   
   document.querySelector("[data-input-url]").select();
   document.execCommand("copy");
