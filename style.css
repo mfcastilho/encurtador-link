@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 10px;
+}
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  background-color: #1F262F;
+}
+
+.box{
+  width: 100%;
+  height: 100vh;
+  max-width: 1280px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.box h2{
+  font-size: 2.8rem;
+  color: #FFF;
+  
+}
+
+.box-input{
+ display: flex;
+
+}
+
+.input-url{
+  width: 40rem;
+  height: 5rem;
+
+  border-radius: 6rem;
+  border: none;
+
+ text-align: center;
+
+ font-size: 1.8rem;
+
+ margin: 0 1rem;
+}
+
+.btn{
+  background-color: #FFD32B;
+  color: #1F262F;
+
+  font-size: 1.8rem;
+
+  padding: 1.5rem 5rem;
+
+  border-radius: 6rem;
+  border: none;
+
+  margin-right: 1rem;
+
+  cursor: pointer;
+
+  width: 17rem;
+
+  transition: .5s;
+}
+
+.btn:hover{
+  background-color: #e4b600;
+}
+
+
+
+@media (max-width:785px){
+
+  .box{
+    gap: 2.4rem;
+  }
+  .box-input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 1rem
+  }
+
+  .input-url{
+    height: 4rem;
+  
+  }
+  
+  .btn{
+  
+    padding: 1rem 0;
+  
+    width: 10rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:625px){
+
+  .box{
+    gap: 2rem;
+  }
+  .input-url{
+    height: 4rem;
+    font-size: 1.6rem;
+  
+  }
+  
+  .btn{
+  
+    padding: 1rem 0;
+  
+    width: 10rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width:575px){
+
+  .box{
+    gap: 1.8rem;
+  }
+  .box h2{
+    font-size: 2rem;  
+  }
+
+  .input-url{
+  
+    height: 3rem;
+    font-size: 1.2rem;
+  
+  }
+  
+  .btn{
+  
+    padding: .8rem 0;
+  
+    width: 8rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width:415px){
+
+  .box{
+    gap: 1.6rem;
+  }
+  .box h2{
+    font-size: 1.8rem;  
+  }
+
+  .input-url{
+  
+    width: 32rem;
+    height: 2.4rem;
+    font-size: 1rem;
+  
+  }
+  
+  .btn{
+  
+    padding: .6rem 0;
+  
+    width: 6rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width:340px){
+
+  .box{
+    gap: 1.4rem;
+  }
+  .box h2{
+    font-size: 1.6rem;  
+  }
+
+  .input-url{
+  
+    width: 28rem;
+    height: 2.2rem;
+    font-size: 1rem;
+  
+  }
+  
+  .btn{
+  
+    padding: .6rem 0;
+  
+    width: 6rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width:298px){
+
+  .box{
+    gap: 1rem;
+  }
+  .box h2{
+    font-size: 1.5rem;  
+  }
+
+  .input-url{
+  
+    width: 25rem;
+    height: 2rem;
+    font-size: 1rem;
+  
+  }
+  
+  .btn{
+  
+    padding: .5rem 0;
+    
+  
+    width: 5rem;
+    font-size: .8rem;
+    font-weight: bold;
+  }
+}
